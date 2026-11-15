@@ -1,0 +1,101 @@
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.app,
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.start {
+  position: fixed;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  background: #e4572e;
+  color: #fff;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.25);
+}
+
+.status {
+  position: fixed;
+  top: calc(12px + env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 8px 14px;
+  font-size: 14px;
+  background: rgb(255 255 255 / 0.95);
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+  white-space: nowrap;
+}
+
+.alert {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  z-index: 1000;
+  padding: 16px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+  animation: slide-up 0.25s ease-out;
+}
+
+.alert-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.alert-hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(120%);
+  }
+}
+
+.admin {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 1000;
+  width: min(360px, calc(100% - 24px));
+  padding: 12px;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.2);
+}
+
+.admin textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 180px;
+  margin: 8px 0;
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+}
+
+.admin button {
+  margin-right: 8px;
+}
